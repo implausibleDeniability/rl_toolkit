@@ -24,7 +24,7 @@ class MLP(torch.nn.Module):
         layer = torch.nn.Sequential(
             torch.nn.Linear(input_dim, output_dim),
             torch.nn.ReLU(),
-            torch.nn.BatchNorm1d(input_dim, output_dim),
+            torch.nn.BatchNorm1d(output_dim),
         )
         return layer
 
